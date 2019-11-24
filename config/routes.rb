@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :packages
+  devise_for :users
   get 'packages/index'
   get 'packages/new'
   get 'packages/create'
