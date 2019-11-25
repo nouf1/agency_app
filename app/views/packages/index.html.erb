@@ -34,8 +34,11 @@
           <br>
           <%= link_to 'Edit', edit_package_path(package) %>
           <br>
-
-
+          <% if current_user.role == "1" && current_user.id == package.user_id %>
+            <%= link_to 'Destroy', package, method: :delete, data: { confirm: 'Are you sure?' } %>
+          <% else %>
+            <% nil %>
+          <%end%>
         </td>
       </tr>
     <% end %>
