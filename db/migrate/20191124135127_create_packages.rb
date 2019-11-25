@@ -5,8 +5,8 @@ class CreatePackages < ActiveRecord::Migration[5.2]
       t.string :description
       t.string :image
       t.integer :price
-      t.time :start_date
-      t.time :end_date
+      t.date :start_date
+      t.date :end_date
       t.references :user, foreign_key: true
 
       t.timestamps
