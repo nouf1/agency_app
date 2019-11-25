@@ -30,21 +30,44 @@
         <td><%= package.end_date %></td>
         <td><%= package.user_id %></td>
         <td>
-          <%= link_to 'Show', package %>
-          <br>
-          <%= link_to 'Edit', edit_package_path(package) %>
-          <br>
-          <% if current_user.role == "1" && current_user.id == package.user_id %>
-            <%= link_to 'Destroy', package, method: :delete, data: { confirm: 'Are you sure?' } %>
-          <% else %>
-            <% nil %>
-          <%end%>
+<%# THERE WAS A VALIDATION IF & ELSE HERE! %>
         </td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
+<div class="row">
+  <% @packages.each do |package| %>
+    <div class="col-4">
+      <div class="card">
+        <div class="card-header">
+          <h3><%= package.name %></h3>
+        </div>
+          <%= image_tag(package.image, alt: "City Image", class: "card-img-top") %>
+        <div class="card-body">
+            <p class="card-text"><%= package.description %></p>
+
+            <% if user_signed_in? %>
+              <% if current_user.role == "1" && current_user.id == package.user_id %>
+                <%= button_to 'Edit', edit_package_path(package), class: "btn btn-warning btn-sm", form: {style: 'display:inline-block;'}, data: { confirm: 'Do you want to edit this package?' } %>
+                <%= button_to 'Destroy', package, method: :delete, class: "btn btn-danger btn-sm", form: {style: 'display:inline-block;'}, data: { confirm: 'Are you sure?' } %>
+              <% elsif current_user.role == "0" %>
+                <%= button_to 'Book', edit_package_path(package), class: "btn btn-success btn-sm", form: {style: 'display:inline-block;'}, data: { confirm: 'Do you want to book this package?' } %>
+              <% else %>
+                <% nil %>
+              <%end%>
+            <% else %>
+              <% nil %>
+            <%end%>
+        </div>
+        <div class="card-footer text-muted">
+          <%= package.price %>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
 <br>
 
 <%= link_to 'New Package', new_package_path %>
