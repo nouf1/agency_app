@@ -12,19 +12,19 @@ class PackagesController < ApplicationController
   def create
     params[:package][:user_id] = current_user.id
 
-    @package = Package.new(packages_params)
-    @package.save
-    redirect_to packages_path
-
     # @package = Package.new(packages_params)
-    # if @package.save
-    #   flash[:success] = "Package successfully created"
-    #   # redirect_to @package
-    #   redirect_to packages_path
-    # else
-    #   flash[:error] = "Something went wrong"
-    #   render 'new'
-    # end
+    # @package.save
+    # redirect_to packages_path
+
+    @package = Package.new(packages_params)
+    if @package.save
+      flash[:success] = "Package successfully created"
+      # redirect_to @package
+      redirect_to packages_path
+    else
+      flash[:error] = "Something went wrong"
+      render 'new'
+    end
   end
 
   def show
