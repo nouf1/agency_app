@@ -20,8 +20,8 @@ ActiveRecord::Schema.define(version: 2019_11_24_135127) do
     t.string "description"
     t.string "image"
     t.integer "price"
-    t.time "start_date"
-    t.time "end_date"
+    t.date "start_date"
+    t.date "end_date"
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
