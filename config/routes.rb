@@ -9,5 +9,7 @@ Rails.application.routes.draw do
   get 'packages/update'
   get 'packages/destroy'
   get 'users/index'
+
+  root 'packages#index'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

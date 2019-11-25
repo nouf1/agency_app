@@ -4,4 +4,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
   has_many :packages
+
+  validates :name, :presence => true, :length => {:minimum => 6, :maximum => 12}
+
 end
