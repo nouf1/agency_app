@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   # get 'packages/new'
   # get 'packages/create'
   # get 'packages/show'
-  get 'packages/edit'
+  # get 'packages/edit'
   # get 'packages/update'
   # get 'packages/destroy'
   # get 'users/index'
