@@ -3,6 +3,11 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.6.5'
 
+gem 'bootswatch-rails'
+# Use Bootstrap4
+gem 'bootstrap', '~> 4.3.1'
+# Use jQuery
+gem 'jquery-rails', '~> 4.3', '>= 4.3.3'
 # devise gem
 gem 'devise', '~> 4.7', '>= 4.7.1'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
