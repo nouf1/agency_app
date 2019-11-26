@@ -40,7 +40,7 @@ class PackagesController < ApplicationController
       if @package.update(packages_params)
         flash[:success] = "Package was successfully updated"
         # redirect_to @package
-        redirect_to @package
+        redirect_to packages_path
       else
         flash[:error] = "Something went wrong"
         render 'edit'

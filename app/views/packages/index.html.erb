@@ -4,39 +4,6 @@
 <hr>
 <h1>Packages</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>ID</th>
-      <th>Name</th>
-      <th>Description</th>
-      <th>Image</th>
-      <th>Price</th>
-      <th>Start Date</th>
-      <th>End Date</th>
-      <th>User ID</th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @packages.each do |package| %>
-      <tr>
-        <td><%= package.id %></td>
-        <td><%= package.name %></td>
-        <td><%= package.description %></td>
-        <td><%= image_tag(package.image, size: "150x150", alt: "City Image") %></td>
-        <td><%= package.price %></td>
-        <td><%= package.start_date %></td>
-        <td><%= package.end_date %></td>
-        <td><%= package.user_id %></td>
-        <td>
-<%# THERE WAS A VALIDATION IF & ELSE HERE! %>
-        </td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
 <div class="row">
   <% @packages.each do |package| %>
     <div class="col-4">
@@ -50,7 +17,7 @@
 
             <% if user_signed_in? %>
               <% if current_user.role == "1" && current_user.id == package.user_id %>
-                <%= button_to 'Edit', edit_package_path(package), class: "btn btn-warning btn-sm", form: {style: 'display:inline-block;'}, data: { confirm: 'Do you want to edit this package?' } %>
+                <%= button_to 'Edit', edit_package_path(package), method: :get, class: "btn btn-warning btn-sm", form: {style: 'display:inline-block;'}, data: { confirm: 'Do you want to edit this package?' } %>
                 <%= button_to 'Destroy', package, method: :delete, class: "btn btn-danger btn-sm", form: {style: 'display:inline-block;'}, data: { confirm: 'Are you sure?' } %>
               <% elsif current_user.role == "0" %>
                 <%= button_to 'Book', edit_package_path(package), class: "btn btn-success btn-sm", form: {style: 'display:inline-block;'}, data: { confirm: 'Do you want to book this package?' } %>
@@ -70,7 +37,7 @@
 </div>
 <br>
 
-<%= link_to 'New Package', new_package_path %>
+<%= button_to 'New Package', new_package_path, method: :get, class: "btn btn-primary btn-sm", form: {style: 'display:inline-block;'}, data: { confirm: 'Do you want to edit this package?' } %>
 <hr>
 
 <%= link_to  "Sign Up", new_user_registration_path %>
