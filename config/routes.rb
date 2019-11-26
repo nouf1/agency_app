@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   resources :packages
+  resources :bookings
   devise_for :users
   # get 'packages/index'
   # get 'packages/new'
