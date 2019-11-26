@@ -9,7 +9,7 @@
     <div class="col-4">
       <div class="card">
         <div class="card-header">
-          <h3><%= package.name %></h3>
+          <h3><%= link_to package.name, package_path(package) %></h3>
         </div>
           <%= image_tag(package.image, alt: "City Image", class: "card-img-top") %>
         <div class="card-body">
