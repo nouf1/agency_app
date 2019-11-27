@@ -14,3 +14,67 @@
  *= require_self
  */
 
+@import "bootstrap.min.css";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+}
+
+*::-webkit-scrollbar {
+  width: 0.5em;
+  background-color: rgba(0, 0, 0, 0.75);
+
+}
+
+*::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px rgba(128, 128, 128, 0.5);
+  -webkit-box-shadow: inset 0 0 5px rgba(128, 128, 128, 0.5);
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: rgba(128, 128, 128, 0.5);
+  outline: 10px solid #80808080;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: calc(0.75rem + 0.25vw);
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  background-color: rgba($color: #000000, $alpha: 0.1);
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.navbar-nav li:last-child {
+  border-left: rgba($color: #ffffff, $alpha: 0.1) 1px solid;
+  padding-left: 2.5em;
+}
+
+.nav-link:hover {
+  padding: 1.2em;
+  background-color: rgba($color: #ffffff, $alpha: 0.1);
+}
+
+.amigos-logo:hover {
+  transform: scale(1.25);
+}
+
+// .description-ellipsis {
+//   display: inline-block;
+//   width: 100%;
+//   white-space: nowrap;
+//   overflow: hidden !important;
+//   text-overflow: ellipsis;
+// }
