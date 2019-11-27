@@ -1,20 +1,23 @@
-Agency App
+# Welcome to Agency app
+
 ======
-<!--
-Demo
-------
-Working live demo: https://moayad93.github.io/tic-tac-toe/
 
-Site
-------
+# User Story
 
-### Landing Page
-![Landing Page](landing-page.png)
+**1. The user have the ability to discover any packages we offer without signing in and signing up.**
 
-### Game Board
-![Game Board](game-board.png) -->
+**2. The customer have the ability to sign up and sign in.**
 
-Usage
+**3. The customer have the ability to book any trip once he signs in.**
+
+**4. The customer have the ability to see the history of the previous booked trips.**
+
+**5. The agency have the ability to sign in and sign up.**
+
+**6. The agency have the ability to add and delete packages once he signed in.**
+
+**7. The agency have the ability to see the customers who booked the trip.**
+
 ------
 
 ### Development
@@ -47,3 +50,4 @@ Authors
 <a href="https://github.com/Abdulrhman-J/">Abdulrahamn Aljammaz</a>
 <a href="https://github.com/Muneerabinhotan/">Muneera Bin Hotan</a>
 <a href="https://github.com/Moayad93/">Moayad Alnuwaysir</a>
+<a herf="https://github.com/shabams"> Abdulrahman Alshabibi </a>
