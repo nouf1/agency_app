@@ -2,8 +2,8 @@
 <p>Find me in app/views/packages/index.html.erb</p>
 
 <hr>
-<h1>Packages</h1>
-
+<h1 class="display-4">Packages</h1>
+<%= button_to 'New Package', new_package_path, method: :get, class: "btn btn-primary btn-sm mx-auto", form: {style: 'display:inline-block;'}, data: { confirm: 'Do you want to edit this package?' } %>
 <div class="row">
   <% @packages.each do |package| %>
     <div class="col-4">
@@ -20,7 +20,7 @@
                 <%= button_to 'Edit', edit_package_path(package), method: :get, class: "btn btn-warning btn-sm", form: {style: 'display:inline-block;'}, data: { confirm: 'Do you want to edit this package?' } %>
                 <%= button_to 'Destroy', package, method: :delete, class: "btn btn-danger btn-sm", form: {style: 'display:inline-block;'}, data: { confirm: 'Are you sure?' } %>
               <% elsif current_user.role == "0" %>
-                <%= button_to 'Book', edit_package_path(package), class: "btn btn-success btn-sm", form: {style: 'display:inline-block;'}, data: { confirm: 'Do you want to book this package?' } %>
+                <%= button_to 'Book', bookings_path(package), class: "btn btn-success btn-sm",  form: {style: 'display:inline-block;'}, data: { confirm: 'Do you want to book this package?' } %>
               <% else %>
                 <% nil %>
               <%end%>
@@ -39,7 +39,6 @@
 </div>
 <br>
 
-<%= button_to 'New Package', new_package_path, method: :get, class: "btn btn-primary btn-sm", form: {style: 'display:inline-block;'}, data: { confirm: 'Do you want to edit this package?' } %>
 <hr>
 
 <%= link_to  "Sign Up", new_user_registration_path %>

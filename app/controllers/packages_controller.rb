@@ -58,15 +58,15 @@ class PackagesController < ApplicationController
       params.require(:package).permit(:name, :description, :image, :price, :start_date, :end_date, :user_id)
     end
 
-  def is_owner
-    if user_signed_in?
-        if current_user.id == Package.find(params[:id]).user_id
-            return true
-        else
-            redirect_to packages_path
-        end
-    else
-      redirect_to packages_path
+    def is_owner
+      if user_signed_in?
+          if current_user.id == Package.find(params[:id]).user_id
+              return true
+          else
+              redirect_to packages_path
+          end
+      else
+        redirect_to packages_path
+      end
     end
-  end
 end

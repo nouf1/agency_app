@@ -2,17 +2,24 @@ class BookingsController < ApplicationController
     before_action :is_owner, only: [:destroy]
 
   def index
-    @bookings = Booking.all
+    @bookings = current_user.bookings.all
+    
   end
 
   def new
     @bookings = Booking.new
+
+
+   
   end
 
   def create
-    params[:booking][:user_id] = current_user.id
-
-    @booking = Booking.new(bookings_params)
+  params[:booking]= {
+    user_id: current_user.id,
+   package_id: params[:format]
+  }
+    @booking = current_user.bookings.new(bookings_params)
+    
     if @booking.save
       flash[:success] = "Booking successfully created"
       # redirect_to @booking
@@ -24,7 +31,7 @@ class BookingsController < ApplicationController
   end
 
   def show
-    @booking = Booking.find(params[:id])
+    # @booking = Booking.find(params[:id])
   end
 
   def edit
@@ -55,7 +62,7 @@ class BookingsController < ApplicationController
 
   private
     def bookings_params
-      params.require(:booking).permit(:name, :description, :image, :price, :start_date, :end_date, :user_id)
+      params.require(:booking).permit(:user_id, :package_id)
     end
 
   def is_owner
