@@ -1,0 +1,31 @@
+
+<% @bookings.each do |book|%>
+
+ <div class="col-4">
+      <div class="card">
+        <div class="card-header">
+          <h3><%= link_to book.package.name, package_path(book.package) %></h3>
+        </div>
+        <%= image_tag(book.package.image, alt: "City Image", class: "card-img-top") %>
+        <div class="card-body">
+            <p class="card-text"><%= book.package.description %></p>
+   
+            <%= button_to 'Destroy', book, method: :delete, class: "btn btn-danger btn-sm", form: {style: 'display:inline-block;'}, data: { confirm: 'Are you sure?' } %>
+            
+        </div>
+
+        <div class="card-footer text-muted">
+          <%= book.package.price %>
+        </div>
+
+      </div>
+    </div>
+ 
+</div>
+
+
+
+
+
+
+<%end%>
