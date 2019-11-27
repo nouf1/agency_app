@@ -3,23 +3,19 @@ class BookingsController < ApplicationController
 
   def index
     @bookings = current_user.bookings.all
-    
   end
 
   def new
     @bookings = Booking.new
-
-
-   
   end
 
   def create
   params[:booking]= {
     user_id: current_user.id,
-   package_id: params[:format]
+    package_id: params[:format]
   }
     @booking = current_user.bookings.new(bookings_params)
-    
+
     if @booking.save
       flash[:success] = "Booking successfully created"
       # redirect_to @booking
@@ -40,13 +36,13 @@ class BookingsController < ApplicationController
 
   def update
     @booking = Booking.find(params[:id])
-      if @Booking.update(bookings_params)
-        flash[:success] = "Booking was successfully updated"
-        redirect_to bookings_path
-      else
-        flash[:error] = "Something went wrong"
-        render 'edit'
-      end
+    if @Booking.update(bookings_params)
+      flash[:success] = "Booking was successfully updated"
+      redirect_to bookings_path
+    else
+      flash[:error] = "Something went wrong"
+      render 'edit'
+    end
   end
 
   def destroy
