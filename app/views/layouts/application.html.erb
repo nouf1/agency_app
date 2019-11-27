@@ -12,7 +12,7 @@
   <body>
       <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-          <%= image_tag 'https://media.giphy.com/media/dYUslDahf6Uw71gH3t/giphy.gif', size: "100x100" %>
+          <%= image_tag 'https://media.giphy.com/media/dYUslDahf6Uw71gH3t/giphy.gif', size: "100x100", class: "amigos-logo" %>
           <a class="navbar-brand" href="/">Amigos</a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -20,29 +20,28 @@
 
           <div class="collapse navbar-collapse" id="navbarColor02">
             <ul class="navbar-nav mr-auto">
-              <li class="nav-item active">
-                <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+              <li class="nav-item">
+                <a class="nav-link" href="/">Home</a>
+              </li>
+              <li class="nav-item">
+                <% if user_signed_in? %>
+                  <% if current_user.role == "0" %>
+                    <%= link_to 'Bookings', bookings_path(@bookings), class: "nav-link" %>
+                  <%end%>
+                <%end%>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">About</a>
               </li>
+              <li class="nav-item">
+                <% if user_signed_in? %>
+                  <%= link_to "Log out", destroy_user_session_path, class: "nav-link", method: :delete %>
+                <% else %>
+                  <%= link_to "Log In", new_user_session_path, class: "nav-link" %>
+                <% end %>
+              </li>
             </ul>
 
-            <ul class="my-2 my-lg-0 d-inline-block">
-
-            <% if user_signed_in? %>
-              <% if current_user.role == "0" %>
-                <%= link_to 'Booking', bookings_path(@bookings), class: "text-white" %>
-              <%end%>
-            <%end%>
-
-            <ul class="my-2 my-lg-0 d-inline-block">
-              <% if user_signed_in? %>
-                <%= link_to "Log out", destroy_user_session_path, class: "text-white", method: :delete %>
-              <% else %>
-                <%= link_to "Log In", new_user_session_path, class: "text-white" %>
-              <% end %>
-            </ul>
           </div>
 
         </nav>

@@ -54,7 +54,21 @@ body {
 }
 
 .card:hover {
-  transform: scale(1.050);
+  transform: scale(1.05);
+}
+
+.navbar-nav li:last-child {
+  border-left: rgba($color: #ffffff, $alpha: 0.1) 1px solid;
+  padding-left: 2.5em;
+}
+
+.nav-link:hover {
+  padding: 1.2em;
+  background-color: rgba($color: #ffffff, $alpha: 0.1);
+}
+
+.amigos-logo:hover {
+  transform: scale(1.25);
 }
 
 // .description-ellipsis {

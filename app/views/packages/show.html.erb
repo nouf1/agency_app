@@ -26,12 +26,16 @@
   <% if user_signed_in? %>
     <% if current_user.role == "1" && current_user.id == @package.user_id %>
       <%= button_to 'Edit', edit_package_path(@package), method: :get, class: "btn btn-warning btn-sm", form: {style: 'display:inline-block;'}, data: { confirm: 'Do you want to edit this package?' } %>
-      <%= button_to 'Destroy', @package, method: :delete, class: "btn btn-danger btn-sm", form: {style: 'display:inline-block;'}, data: { confirm: 'Are you sure?' } %>
+      <%= button_to 'Delete', @package, method: :delete, class: "btn btn-danger btn-sm", form: {style: 'display:inline-block;'}, data: { confirm: 'Are you sure?' } %>
     <% elsif current_user.role == "0" %>
       <%= button_to 'Book', bookings_path(@package), class: "btn btn-success btn-sm",  form: {style: 'display:inline-block;'}, data: { confirm: 'Do you want to book this package?' } %>
+      <%= button_to 'Delete', @package, method: :delete, class: "btn btn-danger btn-sm", form: {style: 'display:inline-block;'}, data: { confirm: 'Are you sure?' } %>
     <%end%>
   <%end%>
 </div>
 <br />
 
-<%= button_to "Back", :back, method: :get, class: "btn btn-success btn-sm" %>
+  <div class="text-center">
+    <%= button_to "← Back", :back, method: :get, class: "btn btn-primary btn-sm my-5" %>
+  </div>
+

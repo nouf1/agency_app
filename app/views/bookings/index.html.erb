@@ -1,27 +1,47 @@
+<%if user_signed_in? %>
+  <div class="w-50 mx-auto mb-2">
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+      <strong>Hi <%= current_user.name %></strong>, you are logged in as
+        <% if current_user.role == "0" %>
+          a Customer and you have <%=current_user.bookings.count%> <%if current_user.bookings.count == 1%> booking <%else%> bookings <%end%>
+        <% end %>
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+  </div>
+<% end %>
 
-<% @bookings.each do |book|%>
+<h1 class="display-4 text-muted text-center mt-5">Bookings</h1>
 
- <div class="col-4">
-      <div class="card">
+<div class="row">
+  <% @bookings.each do |booking| %>
+    <div class="col-md-4 col-xs-12">
+      <div class="card border-secondary my-4 mx-4">
         <div class="card-header">
-          <h3><%= link_to book.package.name, package_path(book.package) %></h3>
+          <h3><%= link_to booking.package.name, package_path(booking.package) %></h3>
+          <small class="text-muted">By <%= booking.package.user.name %></small>
         </div>
-        <%= image_tag(book.package.image, alt: "City Image", class: "card-img-top") %>
+        <%= image_tag(booking.package.image, alt: "City Image", class: "card-img-top") %>
         <div class="card-body">
-            <p class="card-text"><%= book.package.description %></p>
-
-            <%= button_to 'Destroy', book, method: :delete, class: "btn btn-danger btn-sm", form: {style: 'display:inline-block;'}, data: { confirm: 'Are you sure?' } %>
-
+            <p class="card-text text-truncate"><%= booking.package.description %></p>
+            <% if user_signed_in? %>
+              <% if current_user.role == "0" %>
+                <%= button_to 'Delete', booking, method: :delete, class: "btn btn-danger btn-sm", form: {style: 'display:inline-block;'}, data: { confirm: 'Are you sure?' } %>
+              <% end %>
+            <% end %>
         </div>
-
         <div class="card-footer text-muted">
-          <%= book.package.price %>
+          <%= booking.package.start_date.strftime("%d %b %Y") %> — <%= booking.package.end_date.strftime("%d %b %Y") %>
         </div>
-
+        <div class="card-footer text-muted">
+          <%= booking.package.price %> <small>SAR</small>
+        </div>
       </div>
     </div>
-
+  <% end %>
 </div>
-<br />
-<%end%>
-<%= button_to "Back", :back, method: :get, form: {style: 'display:inline-block;'}, class: "btn btn-success btn-sm" %>
+
+<div class="text-center my-5">
+  <%= link_to "← Back", :back, class: "btn btn-primary btn-sm", form: {style: 'display:inline-block;'} %>
+</div>
