@@ -6,5 +6,4 @@ class User < ApplicationRecord
   has_many :packages
   has_many :bookings
   validates :name, :presence => true, :length => {:minimum => 6, :maximum => 12}
-
 end
