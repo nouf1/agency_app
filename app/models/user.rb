@@ -3,7 +3,8 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
-  has_many :packages
+  has_many :packages, dependent: :destroy
   has_many :bookings
   validates :name, :presence => true, :length => {:minimum => 6, :maximum => 12}
+  validates :role, :presence => true
 end
