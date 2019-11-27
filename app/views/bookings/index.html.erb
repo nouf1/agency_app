@@ -9,9 +9,9 @@
         <%= image_tag(book.package.image, alt: "City Image", class: "card-img-top") %>
         <div class="card-body">
             <p class="card-text"><%= book.package.description %></p>
-   
+
             <%= button_to 'Destroy', book, method: :delete, class: "btn btn-danger btn-sm", form: {style: 'display:inline-block;'}, data: { confirm: 'Are you sure?' } %>
-            
+
         </div>
 
         <div class="card-footer text-muted">
@@ -20,7 +20,7 @@
 
       </div>
     </div>
- 
+
 </div>
 <br />
 <%end%>
