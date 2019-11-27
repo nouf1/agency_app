@@ -12,6 +12,7 @@
   <body>
       <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+          <%= image_tag 'https://media.giphy.com/media/dYUslDahf6Uw71gH3t/giphy.gif', size: "100x100" %>
           <a class="navbar-brand" href="/">Amigos</a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -23,29 +24,17 @@
                 <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Features</a>
-              </li>
-
-              <li class="nav-item">
-                <a class="nav-link" href="#">Pricing</a>
-              </li>
-
-              <li class="nav-item">
                 <a class="nav-link" href="#">About</a>
               </li>
             </ul>
 
             <ul class="my-2 my-lg-0 d-inline-block">
 
-             <% if user_signed_in? %>
+            <% if user_signed_in? %>
               <% if current_user.role == "0" %>
                 <%= link_to 'Booking', bookings_path(@bookings), class: "text-white" %>
-              <% else %>
-                <%= link_to 'My packages', bookings_path(@bookings), class: "text-white" %>
               <%end%>
             <%end%>
-
-
 
             <ul class="my-2 my-lg-0 d-inline-block">
               <% if user_signed_in? %>
@@ -61,26 +50,36 @@
 
     <div class="container-fluid">
 
-      <div class="w-100 text-center mt-5">
+      <div class="w-100 text-center my-2">
+
         <%# flash messages %>
         <p class="notice"><%= notice %></p>
         <p class="alert"><%= alert %></p>
-        <%if current_user%>
-          <h3>Hi <%= current_user.name %>, you are logged in as
+
+        <div class="w-50 mx-auto mb-2">
+          <div class="alert alert-warning alert-dismissible fade show" role="alert">
+          <%if current_user%>
+            <strong>Hi <%= current_user.name %></strong>, you are logged in as
               <%if current_user.role == "0"%>
                 a Customer and you have <%=current_user.bookings.count%> <%if current_user.bookings.count == 1%> booking <%else%> bookings <%end%>
               <%else%>
                 an Agent and you have <%=current_user.packages.count%> <%if current_user.packages.count == 1%> package <%else%> packages <%end%>
               <%end%>
-          </h3>
-        <%end%>
+          <% end %>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+        </div>
       </div>
 
       <%= yield %>
     </div>
 
-    <footer class="col">
-
+    <footer class="container-fluid footer bg-dark py-3">
+      <div class="row">
+        <small>&copy; Copyright 2019, Amigos</small>
+      </div>
     </footer>
   </body>
 </html>
