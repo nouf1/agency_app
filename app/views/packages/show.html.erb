@@ -4,23 +4,26 @@
 <%= image_tag(@package.image, alt: "City Image", class: "card-img-top d-block w-50 mx-auto mt-4") %>
 <br />
 
-
-<dl class="row w-75 mx-auto">
-    <dt class="col-sm-2 bold">City:</dt>
-    <dd class="col-sm-10"><%= @package.name %></dd>
-
-    <dt class="col-sm-2">Start Date: </dt>
-    <dd class="col-sm-10"><%= @package.start_date.strftime("%d %b %Y") %></dd>
-
-    <dt class="col-sm-2">End Date: </dt>
-    <dd class="col-sm-10"><%= @package.end_date.strftime("%d %b %Y") %></dd>
-
-    <dt class="col-sm-2">Description: </dt>
-    <dd class="col-sm-10 text-wrap" style="width: 16rem;"><%= @package.description %>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</dd>
-
-    <dt class="col-sm-2">Price: </dt>
-    <dd class="col-sm-10"><%= @package.price %> <small>SAR</small></dd>
-</dl>
+<table class="table w-75 mx-auto table-hover my-4">
+  <tbody>
+    <tr>
+      <th scope="row">City</th>
+      <td><%= @package.name %></td>
+    </tr>
+    <tr>
+      <th scope="row">Start/End Date</th>
+      <td>From <%= @package.start_date.strftime("%d %b %Y") %> to <%= @package.end_date.strftime("%d %b %Y") %></td>
+    </tr>
+    <tr>
+      <th scope="row">Description</th>
+      <td><%= @package.description %></td>
+    </tr>
+    <tr>
+      <th scope="row">Price</th>
+      <td><%= @package.price %> <small>SAR</small></td>
+    </tr>
+  </tbody>
+</table>
 
 <div class= "text-center">
   <% if user_signed_in? %>
