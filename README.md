@@ -1,26 +1,34 @@
-Agency App
-======
-<!--
-Demo
+# Welcome to Agency app
+## Table of Contents
+* [ْUser Stories](#user-stories)
+* [Entity Relationship Diagrame](#Entity-Relationship-Diagrame)
+* [WireFrame](#WireFrame)
+* [Development](#Development)
+* [Bug / Feature Request](#Bug/Feature-Request)
+* [Built with](#Built-with)
+* [Authors](#Authors)
+# Demo
+Working live demo: [Amigoes App](https://amigos-agency-app.herokuapp.com/)
+# User Story
+**1. The user have the ability to discover any packages we offer without signing in and signing up.**
+**2. The customer have the ability to sign up and sign in.**
+**3. The customer have the ability to book any trip once he signs in.**
+**4. The customer have the ability to see the history of the previous booked trips.**
+**5. The agency have the ability to sign in and sign up.**
+**6. The agency have the ability to add and delete packages once he signed in.**
+**7. The agency have the ability to see the customers who booked the trip.**
 ------
-Working live demo: https://moayad93.github.io/tic-tac-toe/
-
-Site
+# Entity Relationship Diagrame
+![alt text](./app/assets/images/erd.png )
 ------
-
-### Landing Page
-![Landing Page](landing-page.png)
-
-### Game Board
-![Game Board](game-board.png) -->
-
-Usage
-------
-
-### Development
-
+# WireFrame
+![alt text](./app/assets/images/fw1.png)
+![alt text](./app/assets/images/fw2.png)
+![alt text](./app/assets/images/fw3.png)
+![alt text](./app/assets/images/fw4.png)
+-------
+# Development
 To fix a bug or improve the game features, follow the next steps:
-
 * Fork the repo
 * Create a new branch `git checkout -b fix-bugs` or `git checkout -b improve-features`
 * Do the needed changes to the files
@@ -28,22 +36,18 @@ To fix a bug or improve the game features, follow the next steps:
 * Commit your changes `git commit -m "Fix bugs"` or `git commit -m "Improve features"`
 * Push to the branch `git push origin fix-bugs` or `git push origin improve-features`
 * Create a New Pull Request
-
-### Bug / Feature Request
+------
+## Bug / Feature Request
 If there is a bug, open an issue <a href="https://github.com/Moayad93/agency_app/issues">here</a> by including your issue with explanation.
-
-Built with
 ------
-* Bootstrap
+## Built with
+* Bootstrap (BootSwatch)
 * Ruby on Rails
-
-<!-- To-do
 ------
-The game currently has a multiplayer mode. So, AI would be added to be played against to make the game better -->
-
-Authors
+# Authors
 ------
-<a href="https://github.com/Nouf1/">Nouf Almatroudi</a>
-<a href="https://github.com/Abdulrhman-J/">Abdulrahamn Aljammaz</a>
-<a href="https://github.com/Muneerabinhotan/">Muneera Bin Hotan</a>
-<a href="https://github.com/Moayad93/">Moayad Alnuwaysir</a>
+[Nouf Almatroudi](https://github.com/Nouf1/)
+[Abdulrahamn Aljammaz](https://github.com/Abdulrhman-J/)
+[Muneera Bin Hotan](https://github.com/Muneerabinhotan/)
+[Abdulrahman Alshabibi](https://github.com/shabams)
+[Moayad Alnuwaysir](https://github.com/Moayad93/)
