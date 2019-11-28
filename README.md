@@ -13,8 +13,7 @@
 
 # Demo
 
-![alt text](https://amigos-agency-app.herokuapp.com/ "Amigoes")
-
+[Amigoes App](https://amigos-agency-app.herokuapp.com/)
 
 # User Story
 
