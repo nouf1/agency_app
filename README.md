@@ -68,10 +68,9 @@ If there is a bug, open an issue <a href="https://github.com/Moayad93/agency_app
 * Bootstrap (BootSwatch)
 * Ruby on Rails
 
-<!-- To-do
 ------
-The game currently has a multiplayer mode. So, AI would be added to be played against to make the game better -->
-
+### Authors
+------
 
 [Nouf Almatroudi](https://github.com/Nouf1/)
 
