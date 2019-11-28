@@ -32,7 +32,7 @@
 ------
 ### Entity Relationship Diagrame
 
-![alt text](https://miskacademy.slack.com/files/UNHJKT937/FQLNR0TPD/agency_app_erd__beta_.png "Logo Title Text 1")
+![alt text](./images/erd.png )
 
 ------
 ### WireFrame
