@@ -4,11 +4,11 @@
 
 ## Table of Contents
 * [ْUser Stories](#user-stories)
-* [Entity Relationship Diagrame](#Entity Relationship Diagrame)
+* [Entity Relationship Diagrame](#Entity-Relationship-Diagrame)
 * [WireFrame](#WireFrame)
 * [Development](#Development)
-* [Bug / Feature Request](#Bug / Feature Request)
-* [Built with](#Built with)
+* [Bug / Feature Request](#Bug/Feature-Request)
+* [Built with](#Built-with)
 * [Authors](#Authors)
 
 ======
@@ -72,10 +72,14 @@ If there is a bug, open an issue <a href="https://github.com/Moayad93/agency_app
 ------
 The game currently has a multiplayer mode. So, AI would be added to be played against to make the game better -->
 
-### Authors
-------
-<a href="https://github.com/Nouf1/">Nouf Almatroudi</a>
-<a href="https://github.com/Abdulrhman-J/">Abdulrahamn Aljammaz</a>
-<a href="https://github.com/Muneerabinhotan/">Muneera Bin Hotan</a>
-<a href="https://github.com/Moayad93/">Moayad Alnuwaysir</a>
-<a herf="https://github.com/shabams"> Abdulrahman Alshabibi </a>
+
+[Nouf Almatroudi](https://github.com/Nouf1/)
+
+[Abdulrahamn Aljammaz](https://github.com/Abdulrhman-J/)
+
+[Muneera Bin Hotan](https://github.com/Muneerabinhotan/)
+
+[Moayad Alnuwaysir](https://github.com/Moayad93/)
+
+[Abdulrahman Alshabibi](https://github.com/shabams)
+
