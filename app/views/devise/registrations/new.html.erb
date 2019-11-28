@@ -1,20 +1,19 @@
-<h2>Sign up</h2>
+<h1 class="display-4 text-muted text-center mt-5">Sign up</h1>
 
 <div class="text-danger">
   <%= render "devise/shared/error_messages", resource: resource %>
 </div>
 
-<div class="w-25 mx-auto">
+<div class="w-50 mx-auto">
   <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-
-  <div class="form-check form-check-inline mb-3">
-    <%= f.radio_button :role, "1", class: "form-check-input" %>
-    <%= f.label :role, 'Agent', class: "form-check-label", :value => '1' %>
-    <div class="w-25">
-      <%= f.radio_button :role, "0", class: "form-check-input" %>
-      <%= f.label :role, 'Customer', class: "form-check-label", :value => '0' %>
+    <div class="text-center">
+      <div class="form-check form-check-inline my-4">
+        <%= f.radio_button :role, "1", class: "form-check-input" %>
+        <%= f.label :role, 'Agent', class: "form-check-label", :value => '1' %> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+        <%= f.radio_button :role, "0", class: "form-check-input" %>
+        <%= f.label :role, 'Customer', class: "form-check-label", :value => '0' %>
+      </div>
     </div>
-  </div>
 
     <div class="form-group">
       <%= f.label :Name %><br />
@@ -22,7 +21,8 @@
     </div>
 
     <div class="form-group">
-      <%= f.label :Email_Address %><br />
+      <%= f.label :Email_Address %>
+      <br />
       <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control" %>
       <small class="form-text text-muted">We'll never share your email with anyone else. Trust us!</small>
     </div>
@@ -39,15 +39,13 @@
       <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "form-control" %>
     </div>
 
-
-
     <div class="actions">
-      <%= f.submit "Sign up", class: "btn btn-success btn-block" %>
+      <%= f.submit "Sign up", class: "btn btn-success btn-block mt-5" %>
     </div>
-
-  <%= link_to "Back", :back %>
   <% end %>
 
+  <div class="text-center my-5">
+    <%= link_to "← Back", :back, class: "btn btn-primary btn-sm", form: {style: 'display:inline-block;'} %>
+    <%= link_to "Log in", new_user_session_path, class: "btn btn-primary btn-sm", form: {style: 'display:inline-block;'} %>
+  </div>
 </div>
-
-<%# <%= render "devise/shared/links" %>

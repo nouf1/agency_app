@@ -32,18 +32,18 @@
 ------
 ### Entity Relationship Diagrame
 
-![alt text](./images/erd.png )
+![alt text](./app/assets/images/erd.png )
 
 ------
 ### WireFrame
 
-![alt text](https://miskacademy.slack.com/files/UNNCH2933/FQZAL7MK8/screen_shot_2019-11-24_at_4.11.04_pm.png "Logo Title Text 1")
+![alt text](./app/assets/images/fw1.png)
 
-![alt text](https://miskacademy.slack.com/files/UNNCH2933/FQX4SQ7D3/screen_shot_2019-11-24_at_4.11.09_pm.png "Logo Title Text 1")
+![alt text](./app/assets/images/fw2.png)
 
-![alt text](https://miskacademy.slack.com/files/UNNCH2933/FQX4SQ7BP/screen_shot_2019-11-24_at_4.11.13_pm.png "Logo Title Text 1")
+![alt text](./app/assets/images/fw3.png)
 
-![alt text](https://miskacademy.slack.com/files/UNNCH2933/FQZ0BHLUX/screen_shot_2019-11-24_at_4.11.31_pm.png "Logo Title Text 1")
+![alt text](./app/assets/images/fw4.png)
 
 -------
 ### Development

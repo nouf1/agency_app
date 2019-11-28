@@ -1,41 +1,44 @@
 
-<div class="container bg-light">
-
-<h3 class= "text-center"> <%= @package.name %></h3>
-<br />
-<%= image_tag(@package.image, alt: "City Image", class: "card-img-top",class: "d-block w-50 mx-auto") %>
+<h3 class="text-center"> <%= @package.name %></h3>
+<p class="text-muted text-center">This package is provided by <strong><%= @package.user.name %></strong></p>
+<%= image_tag(@package.image, alt: "City Image", class: "card-img-top d-block w-50 mx-auto mt-4") %>
 <br />
 
-
-<dl class="row">
-  <dt class="col-sm-3">Trip to: </dt>
-  <dd class="col-sm-9"><%= @package.name %></dd>
-
-
-
-  <dt class="col-sm-3">Description: </dt>
-  <dd class="col-sm-9"><%= @package.description %></dd>
-
-
-
-  <dt class="col-sm-3">Date: </dt>
-
-  <dt class="col-sm-3">Price: </dt>
-  <dd class="col-sm-9"><%= @package.price %></dd>
-
-</dl>
+<table class="table w-75 mx-auto table-hover my-4">
+  <tbody>
+    <tr>
+      <th scope="row">City</th>
+      <td><%= @package.name %></td>
+    </tr>
+    <tr>
+      <th scope="row">Start/End Date</th>
+      <td>From <%= @package.start_date.strftime("%d %b %Y") %> to <%= @package.end_date.strftime("%d %b %Y") %></td>
+    </tr>
+    <tr>
+      <th scope="row">Description</th>
+      <td><%= @package.description %></td>
+    </tr>
+    <tr>
+      <th scope="row">Price</th>
+      <td><%= @package.price %> <small>SAR</small></td>
+    </tr>
+  </tbody>
+</table>
 
 <div class= "text-center">
   <% if user_signed_in? %>
     <% if current_user.role == "1" && current_user.id == @package.user_id %>
-        <%= button_to 'Edit', edit_package_path(@package), method: :get, class: "btn btn-warning btn-sm", form: {style: 'display:inline-block;'}, data: { confirm: 'Do you want to edit this package?' } %>
-        <%= button_to 'Destroy', @package, method: :delete, class: "btn btn-danger btn-sm", form: {style: 'display:inline-block;'}, data: { confirm: 'Are you sure?' } %>
+      <%= button_to 'Edit', edit_package_path(@package), method: :get, class: "btn btn-warning btn-sm", form: {style: 'display:inline-block;'}, data: { confirm: 'Do you want to edit this package?' } %>
+      <%= button_to 'Delete', @package, method: :delete, class: "btn btn-danger btn-sm", form: {style: 'display:inline-block;'}, data: { confirm: 'Are you sure?' } %>
     <% elsif current_user.role == "0" %>
-    <%= button_to 'Book', bookings_path(@package), class: "btn btn-success btn-sm",  form: {style: 'display:inline-block;'}, data: { confirm: 'Do you want to book this package?' } %>
+      <%= button_to 'Book', bookings_path(@package), class: "btn btn-success btn-sm",  form: {style: 'display:inline-block;'}, data: { confirm: 'Do you want to book this package?' } %>
+      <%= button_to 'Delete', @package, method: :delete, class: "btn btn-danger btn-sm", form: {style: 'display:inline-block;'}, data: { confirm: 'Are you sure?' } %>
     <%end%>
-<%end%>
+  <%end%>
 </div>
 <br />
+
+<div class="text-center">
+  <%= button_to "← Back", :back, method: :get, class: "btn btn-primary btn-sm my-5" %>
 </div>
 
-<%= button_to "Back", :back, method: :get, form: {style: 'display:inline-block;'}, class: "btn btn-success btn-sm" %>
