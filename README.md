@@ -49,8 +49,8 @@ If there is a bug, open an issue <a href="https://github.com/Moayad93/agency_app
 * Ruby on Rails
 
 # Authors
-[Nouf Almatroudi](https://github.com/Nouf1/)
-[Abdulrahamn Aljammaz](https://github.com/Abdulrhman-J/)
-[Muneera Bin Hotan](https://github.com/Muneerabinhotan/)
-[Abdulrahman Alshabibi](https://github.com/shabams)
-[Moayad Alnuwaysir](https://github.com/Moayad93/)
+* [Nouf Almatroudi](https://github.com/Nouf1/)
+* [Abdulrahamn Aljammaz](https://github.com/Abdulrhman-J/)
+* [Muneera Bin Hotan](https://github.com/Muneerabinhotan/)
+* [Abdulrahman Alshabibi](https://github.com/shabams)
+* [Moayad Alnuwaysir](https://github.com/Moayad93/) <em>(leader)</em>
