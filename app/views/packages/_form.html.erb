@@ -24,6 +24,10 @@
       <%= f.label :description, "Description", class: "lead text-dark" %>
       <%= f.text_area :description, class: "form-control", placeholder: "Description" %>
     </div>
-    <%= f.submit "Submit", :class => "btn btn-success btn-block my-5" %>
+    <%= f.submit "Submit", :class => "btn btn-success btn-block mt-5" %>
   <% end %>
+</div>
+
+<div class="text-center">
+  <%= button_to "← Back", :back, method: :get, class: "btn btn-primary btn-sm my-5" %>
 </div>

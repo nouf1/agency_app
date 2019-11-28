@@ -14,7 +14,8 @@ dubai = Package.create(
   image: 'https://hi-cdn.t-rp.co.uk/images/hotels/6215374/0?width=870&height=480&crop=false',
   start_date: Date.new(2019-11-01),
   end_date: Date.new(2020-02-01),
-  price: 2389
+  price: 2389,
+  user_id: 2
 )
 
 bali = Package.create(
@@ -23,7 +24,8 @@ bali = Package.create(
   image: 'https://hi-cdn.t-rp.co.uk/images/hotels/871609/5?width=870&height=480&crop=false',
   start_date: Date.new(2019-12-01),
   end_date: Date.new(2020-03-01),
-  price: 7455
+  price: 7455,
+  user_id: 2
 )
 
 munich = Package.create(
@@ -32,7 +34,8 @@ munich = Package.create(
   image: 'https://hi-cdn.t-rp.co.uk/images/hotels/7884249/26?width=870&height=480&crop=false',
   start_date: Date.new(2020-01-01),
   end_date: Date.new(2020-02-01),
-  price: 3000
+  price: 3000,
+  user_id: 2
 )
 
 maldives = Package.create(
@@ -41,7 +44,8 @@ maldives = Package.create(
   image: 'https://hi-cdn.t-rp.co.uk/images/hotels/6951639/0?width=870&height=480&crop=false',
   start_date: Date.new(2020-02-01),
   end_date: Date.new(2020-03-01),
-  price: 4389
+  price: 4389,
+  user_id: 2
 )
 
 seychelles = Package.create(
@@ -50,7 +54,8 @@ seychelles = Package.create(
   image: 'https://hi-cdn.t-rp.co.uk/images/hotels/2956156/11?width=870&height=480&crop=false',
   start_date: Date.new(2020-02-01),
   end_date: Date.new(2020-03-01),
-  price: 5687
+  price: 5687,
+  user_id: 2
 )
 
 parague = Package.create(
@@ -59,5 +64,6 @@ parague = Package.create(
   image: 'https://hi-cdn.t-rp.co.uk/images/hotels/379267/0?width=870&height=480&crop=false',
   start_date: Date.new(2020-04-01),
   end_date: Date.new(2020-05-01),
-  price: 5862
+  price: 5862,
+  user_id: 2
 )
