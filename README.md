@@ -1,10 +1,9 @@
-# Welcome to Agency app
+Agency App
+======
 
-
-
-## Table of Contents
+# Table of Contents
 * [ْUser Stories](#user-stories)
-* [Entity Relationship Diagrame](#Entity-Relationship-Diagrame)
+* [Entity Relationship Diagram](#Entity-Relationship-Diagram)
 * [WireFrame](#WireFrame)
 * [Development](#Development)
 * [Bug / Feature Request](#Bug/Feature-Request)
@@ -12,46 +11,28 @@
 * [Authors](#Authors)
 
 # Demo
-
-[Amigoes App](https://amigos-agency-app.herokuapp.com/)
+Working live demo: [Amigoes App](https://amigos-agency-app.herokuapp.com/)
 
 # User Story
+* The user have the ability to discover any packages we offer without signing in and signing up.
+* The customer have the ability to sign up and sign in.
+* The customer have the ability to book any trip once he signs in.
+* The customer have the ability to see the history of the previous booked trips.
+* The agency have the ability to sign in and sign up.
+* The agency have the ability to add and delete packages once he signed in.
+* The agency have the ability to see the customers who booked the trip.
 
-**1. The user have the ability to discover any packages we offer without signing in and signing up.**
-
-**2. The customer have the ability to sign up and sign in.**
-
-**3. The customer have the ability to book any trip once he signs in.**
-
-**4. The customer have the ability to see the history of the previous booked trips.**
-
-**5. The agency have the ability to sign in and sign up.**
-
-**6. The agency have the ability to add and delete packages once he signed in.**
-
-**7. The agency have the ability to see the customers who booked the trip.**
-
-------
-### Entity Relationship Diagrame
-
+# Entity Relationship Diagram
 ![alt text](./app/assets/images/erd.png )
 
-------
-### WireFrame
-
+# WireFrame
 ![alt text](./app/assets/images/fw1.png)
-
 ![alt text](./app/assets/images/fw2.png)
-
 ![alt text](./app/assets/images/fw3.png)
-
 ![alt text](./app/assets/images/fw4.png)
 
--------
-### Development
-
+# Development
 To fix a bug or improve the game features, follow the next steps:
-
 * Fork the repo
 * Create a new branch `git checkout -b fix-bugs` or `git checkout -b improve-features`
 * Do the needed changes to the files
@@ -61,26 +42,16 @@ To fix a bug or improve the game features, follow the next steps:
 * Create a New Pull Request
 ------
 
-### Bug / Feature Request
+## Bug / Feature Request
 If there is a bug, open an issue <a href="https://github.com/Moayad93/agency_app/issues">here</a> by including your issue with explanation.
 
-------
-
-### Built with
+## Built with
 * Bootstrap (BootSwatch)
 * Ruby on Rails
 
-------
-### Authors
-------
-
-[Nouf Almatroudi](https://github.com/Nouf1/)
-
-[Abdulrahamn Aljammaz](https://github.com/Abdulrhman-J/)
-
-[Muneera Bin Hotan](https://github.com/Muneerabinhotan/)
-
-[Moayad Alnuwaysir](https://github.com/Moayad93/)
-
-[Abdulrahman Alshabibi](https://github.com/shabams)
-
+# Authors
+* [Nouf Almatroudi](https://github.com/Nouf1/)
+* [Abdulrahamn Aljammaz](https://github.com/Abdulrhman-J/)
+* [Muneera Bin Hotan](https://github.com/Muneerabinhotan/)
+* [Abdulrahman Alshabibi](https://github.com/shabams)
+* [Moayad Alnuwaysir](https://github.com/Moayad93/) <em>(leader)</em>
